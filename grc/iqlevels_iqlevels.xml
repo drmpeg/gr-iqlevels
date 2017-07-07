@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<block>
+  <name>IQ Level Dump</name>
+  <key>iqlevels_iqlevels</key>
+  <category>[Utilities]/IQ Levels</category>
+  <import>import iqlevels</import>
+  <make>iqlevels.iqlevels($sample_rate, $showlevels)</make>
+  <param>
+    <name>Sample Rate (Sps)</name>
+    <key>sample_rate</key>
+    <value>samp_rate</value>
+    <type>real</type>
+  </param>
+  <param>
+    <name>Show Peak IQ Levels</name>
+    <key>showlevels</key>
+    <type>enum</type>
+    <option>
+      <name>On</name>
+      <key>1</key>
+    </option>
+    <option>
+      <name>Off</name>
+      <key>0</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+</block>
