@@ -46,7 +46,7 @@ namespace gr {
        * class. iqlevels::iqlevels::make is the public interface for
        * creating new instances.
        */
-      static sptr make(double sample_rate, int show_levels);
+      static sptr make(double sample_rate, int showlevels);
     };
 
   } // namespace iqlevels
