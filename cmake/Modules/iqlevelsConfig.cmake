@@ -22,9 +22,10 @@ FIND_LIBRARY(
           /usr/local/lib64
           /usr/lib
           /usr/lib64
-)
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/iqlevelsTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(IQLEVELS DEFAULT_MSG IQLEVELS_LIBRARIES IQLEVELS_INCLUDE_DIRS)
 MARK_AS_ADVANCED(IQLEVELS_LIBRARIES IQLEVELS_INCLUDE_DIRS)
-
