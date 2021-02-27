@@ -36,7 +36,7 @@ namespace gr {
     class IQLEVELS_API iqlevels : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<iqlevels> sptr;
+      typedef std::shared_ptr<iqlevels> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of iqlevels::iqlevels.
