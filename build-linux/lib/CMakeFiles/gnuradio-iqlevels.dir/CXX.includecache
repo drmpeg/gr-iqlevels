@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/iqlevels/api.h
+gnuradio/attributes.h
+-
+
+../include/iqlevels/iqlevels.h
+iqlevels/api.h
+-
+gnuradio/sync_block.h
+-
+
+/media/psf/Home/Google Drive/inoui/src/gr-iqlevels/lib/iqlevels_impl.cc
+config.h
+/media/psf/Home/Google Drive/inoui/src/gr-iqlevels/lib/config.h
+gnuradio/io_signature.h
+-
+iqlevels_impl.h
+/media/psf/Home/Google Drive/inoui/src/gr-iqlevels/lib/iqlevels_impl.h
+stdio.h
+-
+
+/media/psf/Home/Google Drive/inoui/src/gr-iqlevels/lib/iqlevels_impl.h
+iqlevels/iqlevels.h
+-
+

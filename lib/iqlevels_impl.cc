@@ -108,8 +108,8 @@ namespace gr {
             real_mean += in[j].real();
             imag_mean += in[j].imag();
           }
-          real_mean = real_mean / noutput_items;
-          imag_mean = imag_mean / noutput_items;
+          real_mean = real_mean / CHUNKS;
+          imag_mean = imag_mean / CHUNKS;
           delay_count--;
           if (delay_count == 0) {
             delay_count = delay;
