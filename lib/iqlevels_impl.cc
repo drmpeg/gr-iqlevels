@@ -56,6 +56,8 @@ namespace gr {
       real_negative_threshold_count = 0;
       imag_positive_threshold_count = 0;
       imag_negative_threshold_count = 0;
+      real_mean = 0.0;
+      imag_mean = 0.0;
       delay = sample_rate / CHUNKS / 2;
       delay_count = delay;
       show_levels = showlevels;
@@ -103,12 +105,16 @@ namespace gr {
             if (in[j].imag() < imag_negative_threshold) {
               imag_negative_threshold_count++;
             }
+            real_mean += in[j].real();
+            imag_mean += in[j].imag();
           }
+          real_mean = real_mean / CHUNKS;
+          imag_mean = imag_mean / CHUNKS;
           delay_count--;
           if (delay_count == 0) {
             delay_count = delay;
-            printf("peak real = %+e, %+e, %d, %d\n", real_positive, real_negative, real_positive_threshold_count, real_negative_threshold_count);
-            printf("peak imag = %+e, %+e, %d, %d\n", imag_positive, imag_negative, imag_positive_threshold_count, imag_negative_threshold_count);
+            printf("real: range=[%+e to %+e],  mean=%+e,  count below -1=%d,  count above +1=%d\t", real_negative, real_positive, real_mean, real_negative_threshold_count, real_positive_threshold_count);
+            printf("imag: range=[%+e to %+e],  mean=%+e,  count below -1=%d,  count above +1=%d\n", imag_negative, imag_positive, imag_mean, imag_negative_threshold_count, real_positive_threshold_count);
           }
         }
         in += CHUNKS;

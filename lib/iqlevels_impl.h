@@ -45,6 +45,8 @@ namespace gr {
       int real_negative_threshold_count;
       int imag_positive_threshold_count;
       int imag_negative_threshold_count;
+      float real_mean;
+      float imag_mean;
       int delay;
       int delay_count;
       int show_levels;
