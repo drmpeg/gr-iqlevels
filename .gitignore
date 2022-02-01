@@ -1,4 +1,4 @@
 # git ignore
 .vscode/
 __pycache__/
-generated/
+
