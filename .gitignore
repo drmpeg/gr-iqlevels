@@ -3,4 +3,3 @@
 __pycache__/
 build*/
 python/bindings/iqlevels_python.cc
-python/bindings/iqlevels_python.cc
