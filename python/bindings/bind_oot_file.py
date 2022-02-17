@@ -49,8 +49,13 @@ with warnings.catch_warnings():
     warnings.filterwarnings("ignore", category=DeprecationWarning)
 
     bg = BindingGenerator(prefix, namespace,
-                          prefix_include_root, output_dir, define_symbols=defines, addl_includes=includes,
-                          catch_exceptions=False, write_json_output=False, status_output=args.status,
+                          prefix_include_root, 
+                          output_dir, 
+                          define_symbols=defines, 
+                          addl_includes=includes,
+                          catch_exceptions=False, 
+                          write_json_output=False, 
+                          status_output=args.status,
                           flag_automatic=True if args.flag_automatic.lower() in [
                               '1', 'true'] else False,
                           flag_pygccxml=True if args.flag_pygccxml.lower() in ['1', 'true'] else False)

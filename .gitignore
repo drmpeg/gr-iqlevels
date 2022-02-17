@@ -1,4 +1,6 @@
 # git ignore
 .vscode/
 __pycache__/
-
+build*/
+python/bindings/iqlevels_python.cc
+python/bindings/iqlevels_python.cc

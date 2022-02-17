@@ -14,6 +14,14 @@ parameters:
     dtype: enum
     options: ['1', '0']
     option_labels: ['On', 'Off']
+    default: 'On'
+-   id: nsamples
+    label: Samples per calculation
+    dtype: int
+    default: 100
+
+assert:
+-   ${ nsamples > 0 }
 
 inputs:
 -   domain: stream
@@ -21,6 +29,6 @@ inputs:
 
 templates:
     imports: import iqlevels
-    make: iqlevels.iqlevels(${sample_rate}, ${showlevels})
+    make: iqlevels.iqlevels(${sample_rate}, ${showlevels}, ${nsamples})
 
 file_format: 1
