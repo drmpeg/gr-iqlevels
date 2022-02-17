@@ -25,7 +25,6 @@
 
 #define TRUE   1
 #define FALSE  0
-#define CHUNKS 100
 
 namespace gr {
   namespace iqlevels {
@@ -45,12 +44,15 @@ namespace gr {
       int real_negative_threshold_count;
       int imag_positive_threshold_count;
       int imag_negative_threshold_count;
+      float real_mean;
+      float imag_mean;
+      int n_samples;
       int delay;
       int delay_count;
       int show_levels;
 
      public:
-      iqlevels_impl(double sample_rate, int showlevels);
+      iqlevels_impl(double sample_rate, int showlevels, int nsamples);
       ~iqlevels_impl();
 
       int work(int noutput_items,
