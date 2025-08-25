@@ -9,7 +9,7 @@
 ########################################################################
 # Setup library
 ########################################################################
-include(GrPlatform) #define LIB_SUFFIX
+include(GNUInstallDirs)
 
 list(APPEND iqlevels_sources
     iqlevels_impl.cc
@@ -25,7 +25,7 @@ add_library(gnuradio-iqlevels SHARED ${iqlevels_sources})
 target_link_libraries(gnuradio-iqlevels gnuradio::gnuradio-runtime)
 target_include_directories(gnuradio-iqlevels
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
-    PUBLIC $<INSTALL_INTERFACE:include>
+    PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
   )
 set_target_properties(gnuradio-iqlevels PROPERTIES DEFINE_SYMBOL "gnuradio_iqlevels_EXPORTS")
 
